@@ -24,6 +24,7 @@ const Settings = lazy(() => import('@/pages/Settings/Settings'));
 const Profile = lazy(() => import('@/pages/Profile'));
 
 const About = lazy(() => import('@/pages/About'));
+const FinanceAssistant = lazy(() => import('@/views/ai/FinanceAssistant.js'));
 
 let routes = {
   expense: [],
@@ -119,6 +120,11 @@ let routes = {
       path: '/profile',
       element: <Profile />,
     },
+    {
+    path: '/ai/finance-assistant',
+    element: <FinanceAssistant />,
+    name: 'AI财务助手'
+},
     {
       path: '*',
       element: <NotFound />,
